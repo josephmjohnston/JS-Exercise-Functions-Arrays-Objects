@@ -77,9 +77,9 @@ function temperatureCtoF(t) {
 function temperatureInF(temperature, unit) {
   if(unit === "C"){ 
     
-    temperatureCtoF(temperature);
+   let newTemp = temperatureCtoF(temperature);
     
-    return `temperatureCtoF +${'F'}`;
+    return `${newTemp}${'F'}`;
   }
   else if(unit === "F"){
   return `${temperature}${unit}`;
@@ -124,6 +124,12 @@ function makePersonObject(id, name, email) {
 */
 function getName(id, name, email) {
 
+  let person = {
+    id,
+    name,
+    email
+  }
+  return `Hello, my name is ${name}`;
 
 
 }
@@ -144,8 +150,9 @@ function getName(id, name, email) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex() {
-  /* code here */
+function appleIndex(fruits) {
+  return fruits.indexOf('apple');
+  
 }
 
 /**
@@ -163,8 +170,8 @@ function appleIndex() {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruits) {
+  
 }
 
 
@@ -222,7 +229,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  let make = [index];
+  console.log(`This is a ${car}`)
 }
 
 /**
